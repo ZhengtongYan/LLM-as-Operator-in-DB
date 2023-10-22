@@ -33,10 +33,10 @@ cd galois
 ### Create virtual env and install reqs
 
 ```bash
-unzip data/fixed_spider.zip -d data/spider_files
-apt install sqlite3
 conda env create -f environment.yml
 conda activate galois
+unzip data/fixed_spider.zip -d data/spider_files
+apt install sqlite3
 ```
 
 ## Experiments
@@ -50,6 +50,6 @@ The following steps were needed to run the experiments:
 2. Running Galois for both OpenAI and HuggingFace models found in [`src/galois-run/`](src/galois-run/).
 __Note__: You will have to insert your openai key in `.env`. Table 2 values are provided only for OpenAI models. Table 1 values are provided for OpenAI and HuggingFace Models.
 
-3. Manual evaluation for the results are found in [data/results/](data/results/).
+3. Manual evaluation for the results are found in [`data/results/`](data/results/).
 
 4. Evaluation of the data found in [`src/parse-results/`](src/src\parse-results\results.ipynbparse-results/results.ipynb).
