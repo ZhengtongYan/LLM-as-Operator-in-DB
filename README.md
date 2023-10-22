@@ -47,13 +47,9 @@ The following steps were needed to run the experiments:
     - [Mapping DuckDB operations to Natural Language queries.](data/question_maps.json)
     - [Manually parsing DuckDB query plans for join operations.](src/galois-run/Galois_OpenAI_run.ipynb)
 
-2. Running Galois for both OpenAI and HuggingFace models found in `src/galois-run/`.
+2. Running Galois for both OpenAI and HuggingFace models found in [`src/galois-run/`](src/galois-run/).
 __Note__: You will have to insert your openai key in `.env`. Table 2 values are provided only for OpenAI models. Table 1 values are provided for OpenAI and HuggingFace Models.
 
-3. Manual evaluation for the results are found in [data/results/](data/results/README.md).
+3. Manual evaluation for the results are found in [data/results/](data/results/).
 
 4. Evaluation of the data found in [`src/parse-results/`](src/src\parse-results\results.ipynbparse-results/results.ipynb).
-
-
-CoT Results: https://docs.google.com/spreadsheets/d/1mGrTy3n_CXtk1A4JWTNHJbct29afb2kj8A8EKm95bJA/edit#gid=297503116
-asked by reviewer
