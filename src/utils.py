@@ -165,8 +165,6 @@ def map_func(func: str) -> Callable:
     if func=='max': return np.max
     if func == 'count': return len
 
-
-
 def get_cardinality(results):
     answer_dims = []
     for i in range(len(results)):

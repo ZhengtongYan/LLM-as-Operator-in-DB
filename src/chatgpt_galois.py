@@ -474,3 +474,14 @@ def run_question(df,inst_chatgpt,fewshot_chatgpt):
         ans = response['choices'][0]['message']['content']
         single_question_answers.append(ans)
     return single_question_answers
+
+
+def run_CoT(df,inst_chatgpt,cot_ex):
+    cot=[]
+    for i in (range(len(df))):
+        question = df.iloc[i].Question
+        pr = construct_message_dict(inst_chatgpt+' Think step-by-step. Here is an example:',[['What is the largest continent',cot_ex]]) +[ construct_chat_dict("user",question)] +[ construct_chat_dict("assistant",'Let us think step by step.')]
+        response =  completion_with_backoff_chat(model='gpt-3.5-turbo', messages=pr, temperature=0,max_tokens= 400)
+        ans = response['choices'][0]['message']['content']
+        cot.append(ans)
+    return cot
