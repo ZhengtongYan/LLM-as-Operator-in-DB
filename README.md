@@ -26,8 +26,8 @@ avenues for the DB community.
 ## Installation
 ### Clone Repo
 ```bash
-git clone https://gitlab.eurecom.fr/saeedm1/galois.git
-cd galois
+git clone https://github.com/ZhengtongYan/LLM-as-Operator-in-DB.git
+cd llm-as-operator-in-db
 ```
 
 ### Create virtual env and install reqs
